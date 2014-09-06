@@ -1,0 +1,355 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+browser hack
+* safari 3+, chrome 1+, opera9+, ff 3.5+ 
+body:first-of-type #ocho {  color: red }
+ 
+* saf3+, chrome1+ 
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+ #diez  { color: red  }
+}
+ 
+* iPhone / mobile webkit 
+@media screen and (max-device-width: 480px) {
+ #veintiseis { color: red  }
+}
+* moz
+@-moz-document url-prefix(){
+	#selector {
+		propetty: value;
+	 }
+}
+*/
+*, div, article, aside, header, nav, section, footer,
+h1, h2, h3, h4, h5, h6, p, form, fieldset, figure,
+ figcaption, ol, ul, li, a, img, sup, sub, em, i, b, span {
+	padding:0;
+	margin:0;
+	vertical-align: baseline;
+}
+
+@-ms-viewport{
+  width: device-width;
+}
+/*html5*/
+header, nav, article, aside, section, footer {
+	display: inline-block;
+}
+html, body {
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+body {
+	overflow-x: hidden!important;
+	font-size: 100%\9;	
+}
+a { 
+    display:inline-block;
+	text-decoration: none;
+	-ms-border: none;
+	-ms-outlline: none;
+}
+body > div {
+	min-height: 100%;
+}
+img {
+	outline: none;
+	-ms-border:none;
+}
+.grid_1 { width:6.7%; }
+.grid_2{ width:15% ; }
+.grid_3{ width:23.5% ; }
+.grid_4{ width:32% ; }
+.grid_5{ width:40.5% ; }
+.grid_6{ width:49% ; }
+.grid_7{ width:57.5% ; }
+.grid_8{ width:66% ; }
+.grid_9{ width:74.5% ; }
+.grid_10{ width:83% ; }
+.grid_11 { width:91.5%; }
+.grid_12{ width:100% ; }
+
+.grid_1, .grid_2, .grid_3, .grid_4, 
+.grid_5, .grid_6, .grid_7, .grid_8, 
+.grid_9, .grid_10, .grid_11, .grid_12 {
+	display: inline-block;
+	float: left;
+	margin: 0 1.7% 0 0;
+}
+.container {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	max-width: 1360px;
+	min-width: 960px;
+	margin: 0 auto;
+	width: 100%\9;
+	max-width: 90%\9;
+    min-width: 800px\9;
+}
+.container-960 {
+	display: table;
+	table-layout: fixed;
+	width: 86%;
+	max-width: 1120px;
+	min-width: 960px;
+	margin: 0 auto;
+	width: 90%\9;
+	max-width: 1120px\9;
+    min-width: 800px\9;
+}
+.container-800 {
+	display: table;
+	table-layout: fixed;
+	width: 86%;
+	max-width: 800px;
+	min-width: 300px;
+	margin: 0 auto;
+	width: 86%\9;
+	max-width:800px\9;
+    min-width: 300px\9;
+}
+
+.clear {
+	line-height: 0;
+	clear: both;
+}
+.cf:before, 
+.cf:after {
+	content: "";
+	line-height: 0;
+	display:table;
+}
+.cf:after {
+	clear:both;
+}
+/*IE 6*/
+* html .cf {
+	zoom: 1;
+}
+.inner {
+	width: 97%;
+	margin: 0 1.5%;
+	padding: 0;
+	float: left;
+	display: block;
+}
+.inner-cell {
+	width: 98.5%;
+	margin: 0 1.5%;
+	padding: 0;
+	float: left;
+	display: block;
+}
+
+.alpha { margin-left: 0!important;}
+.omega { margin-right: 0!important;}
+
+.cell_1{ width:8.3%; }
+.cell_2{ width:16.6%; }
+.cell_3{ width:25%; }
+.cell_4{ width:33.3%; }
+.cell_5{ width:41.6%; }
+.cell_6{ width:50%;!important }
+.cell_7{ width:58.3%; }
+.cell_8{ width:66.6%; }
+.cell_9{ width:75%; }
+.cell_10{ width:83.3%; }
+.cell_11{ width:91.6%; }
+.cell_12{ width:100%; }
+
+*[class^="cell"]{
+	display: table-cell;
+	vertical-align: top;
+	padding: 0;
+	margin: 0;
+	float: none;
+	min-height: 100%;
+	position: relative;
+}
+.column {
+	position:relative!important; 
+	 margin-bottom:0!important; 
+}
+.pc {
+	display:inline-block;
+}
+.mobile {
+	display:none;
+}
+
+@media screen and (min-width: 300px) and (max-width: 800px) {
+html, body {
+		font-size: 100%;
+	}
+.container {
+		width: 100%;
+		max-width:  800px;
+		min-width: 300px;
+	}
+.container-960, .container-800 {
+		width: 100%;
+		max-width:  100%;
+		min-width: 300px;
+}
+	
+*[class^="grid"], *[class^="cell"], .column {
+	width: 100%!important;
+	max-width:100%;
+	min-width:300px;
+	display: block!important;
+	float: left!important;
+	padding: 0;
+	margin: 0!important;
+	transition: all 1s;	
+	-moz-transition: all 1s;
+	-webkit-transition: all 1s;
+	}
+.inner-cell {
+	width: 96%;
+	margin: 0 2%!important;
+	padding: 0;
+	float: left;
+	display: block;
+}
+.pc {
+	display: none!important;
+}
+.mobile {
+	display: inline-block!important;
+}
+	
+}
+@media screen and (min-width: 801px) and (max-width: 960px) {
+	.container {
+		width: 100%;
+		max-width: 960px;
+		min-width: 801px;
+	}
+	.container-960 {
+		width: 94%;
+		max-width: 960px;
+		min-width: 801px;
+	}
+
+.column {
+	min-width:25%;
+	width: 300px;
+	min-height: 100%;
+	position:relative;
+	 margin-bottom:0;
+}
+*[class^="cell"]:not(.column){
+	width: 75%;
+	max-width: 660px;
+	min-width: 501px;
+}
+}
+@media screen and (min-width: 961px) and (max-width: 1024px) {
+	.container {
+		width: 100%;
+		max-width: 1000px;
+		min-width: 961px;
+		width: 80%\9;
+		max-width: 960px\9;
+		min-width: 800px\9;
+	}
+	.column {
+	min-width:25%;
+	width: 320px;
+	min-height: 100%;
+	position:relative;
+	 margin-bottom:0;
+}
+*[class^="cell"]:not(.column){
+	width: 75%;
+	max-width: 680px;
+	min-width: 641px;
+}
+.container-960 {
+	width: 94%;
+	max-width: 961px;
+	min-width: 900px;
+	margin: 0 auto;
+	-ms-width: 80%\9;
+	-ms-max-width: 960px\9;
+	-ms-min-width: 800px\9;
+
+	}
+
+}
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+	.container {
+		width: 100%;
+		max-width: 1280px;
+		min-width: 1025px;
+		width: 80%\9;
+		max-width: 960px\9;
+		min-width: 800px\9;
+
+	}
+	.container-960 {
+		width: 90%;
+		max-width: 1000px;
+		min-width: 960px;
+	}
+	
+	.column {
+	min-width: 25%;
+	width: 320px;
+	min-height: 100%;
+	position:relative;
+	 margin-bottom:0;
+}
+*[class^="cell"]:not(.column){
+	width: 75%;
+	max-width: 880px;
+	min-width: 705px;
+}
+
+}
+/*@media screen and (min-width: 1281px) and (max-width: 1920px) {
+	.container {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	max-width: 1360px;
+	min-width: 1000px;
+	margin: 0 auto;
+	width: 80%\9;
+	max-width: 960px\9;
+	min-width: 800px\9;
+	-ms-width: 80%;
+	-ms-max-width: 1366px;
+	-ms-min-width: 800px;
+	-ms-box-sizing: border-box;
+
+}
+.container-960 {
+	width: 90%;
+	max-width: 1120px;
+	min-width: 960px;
+	margin: 0 auto;
+	-ms-width: 80%\9;
+	-ms-max-width: 960px\9;
+	-ms-min-width: 800px\9;
+
+	}
+
+   .column {
+	min-width: 25%;
+	width: 320px;
+	min-height: 100%;
+	position:relative;
+	 margin-bottom:0;
+}
+*[class^="cell"]:not(.column){
+	width: 75%;
+	max-width: 960px;
+	min-width: 960px;
+}
+
+}
+*/

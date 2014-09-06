@@ -1,0 +1,227 @@
+@charset "utf-8";
+@import url("../font/font.css");
+/* CSS Document */
+html, body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale; 
+	}
+body {
+	overflow-x: hidden!important;
+	}
+.font-b{
+	font-family: 'antoniobold';
+    src: url('../../font/antonio-bold-webfont.eot');
+
+}
+.font-n{
+	 font-family: 'antonioregular';
+    src: url('../../font/antonio-regular-webfont.eot');
+}
+.font-cd {
+	color:#443E44!important;
+}
+.font-w {
+	color:#fff;
+}
+.tsL {
+	text-shadow: 1px 1px 0 rgba(255,255,255,0.35);
+	behavior: url(PIE/PIE.htc);
+}
+.tsD {
+	text-shadow: 1px 1px 0 rgba(0,0,0,0.35);
+	behavior: url(PIE/PIE.htc);
+}
+
+.relative {
+	position:relative;
+}
+hr {
+	height: 2px;
+	width: 98%;
+	display: block;
+	clear: both;
+	background-image: url(../c800/img/hr.png);
+	background-repeat: repeat-x;
+	background-position: left top;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	margin-top: 5px;
+	margin-right: 1%;
+	margin-bottom: 5px;
+	margin-left: 1%;
+}
+a {
+	display: inline-block;
+	white-space: nowrap;
+	color: inherit;
+	outline: none;
+	border: none;
+}
+a:hover {
+	color:#ED6327;
+}
+body{
+	
+}
+#page {
+	min-height: 100%;
+	background-image: url(../img/page.jpg);
+	background-position: center top;
+	background-size: contain;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-color: #EAE1D2;
+}
+#header .container-800 {
+	padding-top: 20%;
+}
+#header h1 img {
+	width: 50%;
+	min-width:300px;
+	display: block;
+	margin: 0 0 0 10px;
+	
+	}
+#nav ul {
+	list-style: none;
+	text-align: right;
+}
+#nav ul li {
+	color: #655B66;
+	padding:  3px 15px;
+	line-height: 1.8;
+	display: inline-block;
+	text-align: center;
+}
+
+#content {
+	margin: 1em 0;
+}
+
+#content .inner {
+	background-color: rgba(255,255,255, 0.75);
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	box-shadow: inset 0 0 2px rgba(255,255,255,0.65), 0 0 2px rgba(0,0,0,0.15);
+	margin-bottom: 10px;
+	background-image: url(../c800/img/f-bg.png);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+}
+#content h3 {
+	width: 97%;
+	padding: 8px 1.5%;
+	color: #37609D;
+	font-size: 1.25em;
+	font-weight: normal;
+}
+#content h3 a {
+	font-size: 75%;
+	font-weight: normal;
+	color: #666;
+	margin: 0 5px;
+}
+#content p {
+	padding: 0px 2%;
+	color: #483F49;
+	font-size: 0.85em;
+	text-align: justify;
+	line-height: 1.6;
+}
+
+#content span {
+	overflow: hidden;
+	display: inline-block;
+	width: 47%;
+	min-width: 300px;
+	margin: 0 1.5%;
+	box-sizing: border-box;
+
+}
+#content span > img {
+	width: 99%;
+	display: block;
+	margin: 0 auto;
+}
+#content span.left {
+	float:left;
+}
+#content span.h50 {
+	/*height:  calc(100% / 2);
+	max-height: 110.5px;*/
+	color: #666;
+}
+/**/
+.rotate{
+	transform: rotate(-5deg);
+}
+@media screen and (min-width: 300px) and (max-width: 800px) {
+#header .container-800 {
+	padding-top: 5em;
+}
+#header .container-800 img {
+	margin: 10px auto;
+}
+#nav ul {
+	text-align: center;
+}
+#nav ul li {
+	color: #655B66;
+	padding: 3px 0px;
+	line-height: 1.8;
+	display: inline-block;
+	text-align: center;
+	width: 48%;
+	background-color: #7EA9D8;
+	margin-bottom: 2px;
+	box-shadow: inset 0 1px 2px rgba(255,255,255,0.25), 1px 1px 80px rgba(0,0,0,0.25);
+	box-sizing: border-box;
+}
+#nav ul li:hover {
+	box-shadow: inset 0 1px 2px rgba(255,255,255,0.25), 1px 1px 3px rgba(0,0,0,0.25);
+	box-sizing: border-box;
+	background-color: #94B7DE;
+	color: #333;
+}
+#content p {
+	font-size: 1.15em;
+}
+}
+
+@media screen and (min-width: 300px) and (max-width: 640px) {
+	#content span {
+	overflow: hidden;
+	display: inline-block;
+	width: 97%;
+	min-width: 320px;
+	margin: 0 1.5% 10px 1.5%;
+	box-sizing: border-box;
+}
+	}
+	@media screen and (min-width: 641px) and (max-width: 800px) {
+#content span {
+	overflow: hidden;
+	display: inline-block;
+	width: 46.5%;
+	min-width: 284px;
+	margin: 0 1.5%;
+	box-sizing: border-box;
+}
+#content span > img {
+	width: 99%;
+	display: block;
+	margin: 0 auto;
+}
+#content span.left {
+	float:left;
+}
+#content span.h50 {
+	/*height:  calc(100% / 2);
+	max-height: 110.5px;*/
+	color: #666;
+}
+
+	
+	}
